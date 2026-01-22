@@ -5,105 +5,362 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy – Proof AI</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+      background: #000000;
+      color: #f5f5f7;
       line-height: 1.6;
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-      background-color: #ffffff; 
-      color: #111;
+      -webkit-font-smoothing: antialiased;
     }
-
-    h1, h2 {
-      color: #1E90FF; 
+    
+    .hero {
+      background: linear-gradient(135deg, #0a84ff 0%, #0066cc 100%);
+      padding: 80px 20px 100px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
     }
-
-    p {
-      margin-bottom: 16px;
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+      animation: pulse 15s ease-in-out infinite;
     }
-
-    ul {
-      margin-left: 20px;
+    
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.5; }
+      50% { transform: scale(1.2); opacity: 0.8; }
     }
-
-    li {
-      margin-bottom: 8px;
+    
+    .logo-container {
+      position: relative;
+      z-index: 2;
+      margin-bottom: 40px;
     }
-
-    a {
-      color: #1E90FF;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-
+    
     .logo {
+      width: 140px;
+      height: 140px;
+      margin: 0 auto;
       display: block;
-      margin: 0 auto 20px auto;
-      width: 80px;
-      height: 80px;
-      background-color: #1E90FF;
-      border-radius: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      font-size: 36px;
-      color: #fff;
-      font-family: 'Segoe UI', sans-serif;
+      filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4));
+      animation: float 6s ease-in-out infinite;
     }
-
-    .container {
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
-      background-color: #ffffff;
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    .hero h1 {
+      position: relative;
+      z-index: 2;
+      font-size: 56px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 16px;
+      letter-spacing: -1.5px;
+      text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    }
+    
+    .hero p {
+      position: relative;
+      z-index: 2;
+      font-size: 24px;
+      color: rgba(255, 255, 255, 0.95);
+      font-weight: 500;
+      letter-spacing: -0.3px;
+    }
+    
+    .content-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .content {
+      background: linear-gradient(to bottom, #1c1c1e 0%, #0d0d0d 100%);
+      border-radius: 30px;
+      padding: 60px;
+      margin: -60px 20px 0 20px;
+      position: relative;
+      z-index: 3;
+      box-shadow: 0 30px 90px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .meta {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(10, 132, 255, 0.15);
+      border: 1px solid rgba(10, 132, 255, 0.3);
+      padding: 12px 24px;
+      border-radius: 100px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #0a84ff;
+      margin-bottom: 40px;
+      letter-spacing: 0.5px;
+    }
+    
+    .intro {
+      font-size: 28px;
+      line-height: 1.5;
+      color: #f5f5f7;
+      margin-bottom: 60px;
+      font-weight: 400;
+      letter-spacing: -0.5px;
+    }
+    
+    .section {
+      margin-bottom: 70px;
+    }
+    
+    h2 {
+      font-size: 40px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 24px;
+      letter-spacing: -1px;
+      line-height: 1.2;
+    }
+    
+    p {
+      font-size: 19px;
+      line-height: 1.7;
+      color: #a1a1a6;
+      margin-bottom: 20px;
+      letter-spacing: -0.2px;
+    }
+    
+    ul {
+      list-style: none;
+      margin: 24px 0;
+    }
+    
+    li {
+      font-size: 19px;
+      line-height: 1.7;
+      color: #a1a1a6;
+      margin-bottom: 16px;
+      padding-left: 32px;
+      position: relative;
+      letter-spacing: -0.2px;
+    }
+    
+    li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 12px;
+      width: 8px;
+      height: 8px;
+      background: linear-gradient(135deg, #0a84ff 0%, #0066cc 100%);
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(10, 132, 255, 0.5);
+    }
+    
+    .contact-section {
+      background: linear-gradient(135deg, rgba(10, 132, 255, 0.1) 0%, rgba(0, 102, 204, 0.05) 100%);
+      border: 1px solid rgba(10, 132, 255, 0.2);
+      border-radius: 24px;
+      padding: 48px;
+      margin-top: 80px;
+    }
+    
+    .contact-section h2 {
+      font-size: 36px;
+      margin-bottom: 24px;
+    }
+    
+    .contact-section p {
+      color: #f5f5f7;
+      font-size: 19px;
+      margin-bottom: 12px;
+    }
+    
+    a {
+      color: #0a84ff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    
+    a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #0a84ff;
+      transition: width 0.3s ease;
+    }
+    
+    a:hover::after {
+      width: 100%;
+    }
+    
+    strong {
+      color: #ffffff;
+      font-weight: 600;
+    }
+    
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.1) 50%, transparent 100%);
+      margin: 60px 0;
+    }
+    
+    footer {
+      text-align: center;
+      padding: 60px 20px;
+      color: #6e6e73;
+      font-size: 15px;
+    }
+    
+    @media (max-width: 768px) {
+      .hero {
+        padding: 60px 20px 80px 20px;
+      }
+      
+      .logo {
+        width: 100px;
+        height: 100px;
+      }
+      
+      .hero h1 {
+        font-size: 40px;
+        letter-spacing: -1px;
+      }
+      
+      .hero p {
+        font-size: 20px;
+      }
+      
+      .content {
+        padding: 40px 24px;
+        margin: -50px 12px 0 12px;
+        border-radius: 24px;
+      }
+      
+      .intro {
+        font-size: 22px;
+        margin-bottom: 40px;
+      }
+      
+      h2 {
+        font-size: 32px;
+      }
+      
+      p, li {
+        font-size: 17px;
+      }
+      
+      .section {
+        margin-bottom: 50px;
+      }
+      
+      .contact-section {
+        padding: 32px 24px;
+        margin-top: 60px;
+      }
+      
+      .contact-section h2 {
+        font-size: 28px;
+      }
     }
   </style>
 </head>
 <body>
-
-  <div class="logo">AI</div>
-
-  <div class="container">
-    <h1>Privacy Policy – Proof AI</h1>
-    <p><strong>Effective Date:</strong> January 2026</p>
-
-    <p>Proof AI respects your privacy. This Privacy Policy explains how information is handled when you use the Proof AI mobile application.</p>
-
-    <h2>Information We Process</h2>
-    <p>Proof AI allows users to upload images or paste text for analysis. This content is processed solely for verification purposes, such as identifying possible manipulation, AI generation signals, or matching text to known sources.</p>
-    <ul>
-      <li>Uploaded images and text are processed temporarily</li>
-      <li>No user accounts are required</li>
-      <li>No personal identifiers are requested</li>
-    </ul>
-
-    <h2>Data Storage</h2>
-    <p>Proof AI does not permanently store uploaded images or text unless explicitly stated within the app. Content is processed in-memory or temporarily for analysis and then discarded.</p>
-
-    <h2>Third-Party Services</h2>
-    <p>Proof AI may use trusted third-party services (such as cloud-based AI or OCR providers) strictly to perform analysis. These services process data only as required to deliver results and are not permitted to use the data for advertising or profiling.</p>
-
-    <h2>Advertising</h2>
-    <p>Proof AI does not display ads and does not sell user data.</p>
-
-    <h2>Children’s Privacy</h2>
-    <p>Proof AI is not directed at children under the age of 13 and does not knowingly collect personal data from children.</p>
-
-    <h2>Security</h2>
-    <p>We take reasonable measures to protect data during processing. However, no system can be guaranteed to be 100% secure.</p>
-
-    <h2>Changes to This Policy</h2>
-    <p>This policy may be updated to reflect changes in functionality or legal requirements. Updates will be reflected on this page.</p>
-
-    <h2>Contact</h2>
-    <p>If you have questions about this Privacy Policy, you can contact us at:</p>
-    <p><strong>Email:</strong> <a href="mailto:toshinori.helpdesk@gmail.com">toshinori.helpdesk@gmail.com</a></p>
+  <div class="hero">
+    <div class="logo-container">
+      <img src="data:image/svg+xml,%3Csvg width='140' height='140' viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='140' height='140' rx='32' fill='white'/%3E%3Cpath d='M40 56L49 40L58 56L74 56L62 66L67 82L49 71L31 82L36 66L24 56Z' fill='%230a84ff'/%3E%3Cpath d='M74 30L79 20L84 30L94 30L86 36L89 46L79 40L69 46L72 36L64 30Z' fill='%230a84ff'/%3E%3Cpath d='M86 82L90 74L94 82L102 82L96 86L98 94L90 89L82 94L84 86L78 82Z' fill='%230a84ff'/%3E%3C/svg%3E" alt="Proof AI" class="logo">
+    </div>
+    <h1>Privacy Policy</h1>
+    <p>Proof AI</p>
   </div>
-
+  
+  <div class="content-wrapper">
+    <div class="content">
+      <span class="meta">EFFECTIVE JANUARY 2026</span>
+      
+      <p class="intro">Proof AI respects your privacy. This Privacy Policy explains how information is handled when you use the Proof AI mobile application.</p>
+      
+      <div class="section">
+        <h2>Information We Process</h2>
+        <p>Proof AI allows users to upload images or paste text for analysis. This content is processed solely for verification purposes, such as identifying possible manipulation, AI generation signals, or matching text to known sources.</p>
+        <ul>
+          <li>Uploaded images and text are processed temporarily</li>
+          <li>No user accounts are required</li>
+          <li>No personal identifiers are requested</li>
+        </ul>
+      </div>
+      
+      <div class="divider"></div>
+      
+      <div class="section">
+        <h2>Data Storage</h2>
+        <p>Proof AI does not permanently store uploaded images or text unless explicitly stated within the app. Content is processed in-memory or temporarily for analysis and then discarded.</p>
+      </div>
+      
+      <div class="divider"></div>
+      
+      <div class="section">
+        <h2>Third-Party Services</h2>
+        <p>Proof AI may use trusted third-party services (such as cloud-based AI or OCR providers) strictly to perform analysis. These services process data only as required to deliver results and are not permitted to use the data for advertising or profiling.</p>
+      </div>
+      
+      <div class="divider"></div>
+      
+      <div class="section">
+        <h2>Advertising</h2>
+        <p>Proof AI does not display ads and does not sell user data.</p>
+      </div>
+      
+      <div class="divider"></div>
+      
+      <div class="section">
+        <h2>Children's Privacy</h2>
+        <p>Proof AI is not directed at children under the age of 13 and does not knowingly collect personal data from children.</p>
+      </div>
+      
+      <div class="divider"></div>
+      
+      <div class="section">
+        <h2>Security</h2>
+        <p>We take reasonable measures to protect data during processing. However, no system can be guaranteed to be 100% secure.</p>
+      </div>
+      
+      <div class="divider"></div>
+      
+      <div class="section">
+        <h2>Changes to This Policy</h2>
+        <p>This policy may be updated to reflect changes in functionality or legal requirements. Updates will be reflected on this page.</p>
+      </div>
+      
+      <div class="contact-section">
+        <h2>Contact</h2>
+        <p>If you have questions about this Privacy Policy, you can contact us at:</p>
+        <p><strong>Email:</strong> <a href="mailto:toshinori.helpdesk@gmail.com">toshinori.helpdesk@gmail.com</a></p>
+      </div>
+    </div>
+  </div>
+  
+  <footer>
+    <p>© 2026 Proof AI. All rights reserved.</p>
+  </footer>
 </body>
 </html>
